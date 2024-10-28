@@ -78,19 +78,70 @@
   </table>
       </p>
     </div>
+    <form>
+      <label for="userNumber">"Phone Number(Singapore/+65)"</label>
+      <input type="number" id="userNumber" placeholder="67847345" class="form-control">
+      <div class="d-none text-danger" id="errorMessage">
+        <p>Please enter your phone number</p>
+      </div>
+      <button type=button class="btn btn-warning" onclick="buttonClick()">Submit</button>
+
+    </form>
   </body>
   <script>
-      const BestBoy="Cody"
-      console.log(BestBoy)
+
+    const buttonClick = () => {
+      let userNumber = document.getElementById("userNumber").value.length;
+      if (userNumber != 8) {
+        document.getElementById("userNumber").classList = "form-control is-invalid";
+        document.getElementById("errorMessage").classList = "text-danger";
+      }else{
+        document.getElementById("userNumber").classList = "form-control";
+        document.getElementById("errorMessage").classList = "d-none text-danger";
+      }
+    }
+    const BestBoy="Cody"
+    console.log(BestBoy)
+    // //let buttonClick=()=> {
+    // console.log(userNumber.value.length)
+    // userNumber.classList="form-control is-invalid";
+    // document.getElementById("errorMessage").classList="text-danger";
+    // } 
     console.log("Hello World");
     console.warn("Hello World");
     console.error("Hello World");
     const animal="Capybara"
-  console.log(animal)
-  let animals="BIG BIRD IS TOUCAN"
-  console.error(animals)
+   console.log(animal)
+    let animals="BIG BIRD IS TOUCAN"
+    console.error(animals)
+    let n1=6
+    let n2=8
+    let n3=10
+    let tn=n1*n2*n3
+    console.log(tn)
+    let n4=5
+    let n5=20
+    let n6=7
+    let n7=2
+    let tn2=n4+n5-n6
+    let tn3=tn2/n7
+    console.log(tn3)
+    a=6
+    t="positive number"
+    n="negative number"
+    s="Number is 0"
+    if (a>0){console.log(t)}
+    if (a<0){console.log(n)}
+    if (a=0){console.log(s)}
+    b=6
+    tr="Even number"
+    ne="Odd number"
+    if (b%2==0){console.log(tr)}
+    if (b%2!=0){console.log(ne)}
+    
   </script>
 </html>
+
 <button class="btn btn-primary">Click this and nothing will happen!</button>
 <button class="btn btn-danger">Click this and nothing will happen!</button>
 <button class="btn btn-success">Click this and nothing will happen!</button>
@@ -122,7 +173,7 @@
 <button class="btn btn-warning">Click this and nothing will happen!</button>
 <button class="btn btn-info">Click this and nothing will happen!</button>
 <td><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="btn btn-seconary"">Click this and something will happen!</button></a></td>
-<button class="btn btn-seconary"">Click this and something will happen!</button>
+<button class="btn btn-seconary"">Click this and nothing will happen!</button>
 <button class="btn btn-dark">Click this and nothing will happen!</button>
 <button class="btn btn-primary">Click this and nothing will happen!</button>
 <button class="btn btn-danger">Click this and nothing will happen!</button>
@@ -346,3 +397,15 @@
 <button class="btn btn-info">Click this and nothing will happen!</button>
 <button class="btn btn-seconary"">Click this and nothing will happen!</button>
 <button class="btn btn-dark">Click this and nothing will happen!</button>
+
+
+
+
+
+<ul>
+  <li>Score AL1 for English</li>
+  <li>Score AL1 for Math</li>
+  <li>Score AL1 for Science</li>
+  <li>Score AL1 for Chinese</li>
+  <li>Pass my Higher Chinese :(</li>
+</ul>

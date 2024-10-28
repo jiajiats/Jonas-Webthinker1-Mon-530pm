@@ -50,22 +50,80 @@
 		<!-- Key section -->
 		<form class="container py-3">
 			<div class="row gy-3">
-				<!-- Label: Name*
-						 Text Input field -->
-
-				<!-- Label: Email Address*
-						 Email Input field -->
-
+				<!-- Label: Name* Text Input field -->
+				<label for="userName">Your name*</label>
+				<input type="text" id="userName" placeholder="John Doe" class="form-control">
+				<div class="d-none text-danger" id="errorMessage">
+					<p>Please enter your name</p>
+				</div>
+		 		<!-- Label: Email Address*
+				// 		 Email Input field -->
+				<label for="userE">Your email*</label>
+				<input type="email" id="userE" placeholder="abc@gmail.com" class="form-control">
+				<div class="d-none text-danger" id="errorMessage2">
+					<p>Please enter your email</p>
+				</div>	
 				<!-- Label: Subject*
-						 Text Input field with placeholder text "Enquiry on how to code"-->
-
+				// 		 Text Input field with placeholder text "Enquiry on how to code"-->
+				<label for="userS">Enquiry on how to code*</label>
+				<input type="text" id="userS" placeholder="HTML" class="form-control">
+				<div class="d-none text-danger" id="errorMessage11">
+					<p>Please enter your enquiry on how to code</p>
+				</div>
+				
 				<!-- Label: Subject*
-						 Textarea field with the row attribute of value 5-->
+				// 		 Textarea field with the row attribute of value 5-->
+				<label for="userSj">Subject*</label>
+				<input type="text" id="userSj" placeholder="I do not know how to do HTML. Can you teach me?" class="form-control">
+				<div class="d-none text-danger" id="errorMessage12">
+					<p>Please enter your subject</p>
+				</div>
+
+				<!-- Code a blue "Send" button inside a <div> according to the criteria stated -->
+				<button type=button class="btn btn-warning" onclick="buttonClick()">Submit</button>
 			</div>
-			<!-- Code a blue "Send" button inside a <div> according to the criteria stated -->
 		</form>
 	</article>
 	<!-- End of coding region -->
 	<footer class="bg-dark text-light"><div class="container py-2 pb-4">Done by Computhink Kids SG.</div></footer>
+	<script>   
+		const buttonClick = () => {
+			let userS = document.getElementById("userS").value.length;
+			if (userS == 0) {
+				document.getElementById("userS").classList = "form-control is-invalid";
+				document.getElementById("errorMessage11").classList = "text-danger";
+			}else{
+				document.getElementById("userS").classList = "form-control";
+				document.getElementById("errorMessage11").classList = "d-none text-danger";
+			}
+
+			let userSj = document.getElementById("userSj").value.length;
+			if (userSj == 0) {
+				document.getElementById("userSj").classList = "form-control is-invalid";
+				document.getElementById("errorMessage12").classList = "text-danger";
+			}else{
+				document.getElementById("userSj").classList = "form-control";
+				document.getElementById("errorMessage12").classList = "d-none text-danger";
+			}
+
+			let userE = document.getElementById("userE").value.length;
+			if (userE == 0) {
+				document.getElementById("userE").classList = "form-control is-invalid";
+				document.getElementById("errorMessage2").classList = "text-danger";
+			}else{
+				document.getElementById("userE").classList = "form-control";
+				document.getElementById("errorMessage2").classList = "d-none text-danger";
+			}
+
+			let userName = document.getElementById("userName").value.length;
+			if (userName == 0) {
+				document.getElementById("userName").classList = "form-control is-invalid";
+				document.getElementById("errorMessage").classList = "text-danger";
+			}else{
+				document.getElementById("userName").classList = "form-control";
+				document.getElementById("errorMessage").classList = "d-none text-danger";
+			}
+		}
+	</script>
 </body>
 </html>
